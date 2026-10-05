@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MarketPilot AI — AI Marketing Manager</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span>✦</span> MarketPilot AI</div>
+    <button class="nav active" data-page="dashboard">⌂ Dashboard</button>
+    <button class="nav" data-page="business">▣ Business</button>
+    <button class="nav" data-page="content">✎ Content</button>
+    <button class="nav" data-page="seo">⌕ SEO</button>
+    <button class="nav" data-page="ads">◈ Ads</button>
+    <button class="nav" data-page="analytics">↗ Analytics</button>
+    <div class="side-bottom"><button class="nav" data-page="settings">⚙ Settings</button></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+      <div><small>AI MARKETING MANAGER</small><h1 id="pageTitle">Dashboard</h1></div>
+      <button class="primary" id="quickPlan">✦ Generate AI Plan</button>
+    </header>
+
+    <section id="dashboard" class="page active">
+      <div class="hero">
+        <div><span class="pill">AI-powered growth</span><h2 id="welcome">Grow your business with AI.</h2><p id="businessSummary">Set up your business profile to generate a personalized marketing strategy.</p></div>
+        <button class="dark-btn" data-goto="business">Set up business →</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><span>Marketing Score</span><b id="score">—</b><small>AI estimate</small></div>
+        <div class="stat"><span>Content Ideas</span><b id="ideas">0</b><small>ready to create</small></div>
+        <div class="stat"><span>SEO Opportunities</span><b id="seoCount">0</b><small>identified</small></div>
+        <div class="stat"><span>Campaign Ideas</span><b id="campaigns">0</b><small>planned</small></div>
+      </div>
+      <div class="grid two">
+        <div class="card"><div class="card-head"><h3>AI Recommendations</h3><span>Live</span></div><div id="recommendations" class="list empty">Generate your first AI plan.</div></div>
+        <div class="card"><div class="card-head"><h3>30-Day Focus</h3><span>Strategy</span></div><div id="focus" class="list empty">Your plan will appear here.</div></div>
+      </div>
+    </section>
+
+    <section id="business" class="page">
+      <div class="section-title"><div><h2>Business Profile</h2><p>Give the AI the context it needs to market your business.</p></div></div>
+      <form id="businessForm" class="card form">
+        <div class="form-grid">
+          <label>Business name<input id="name" required placeholder="ABC Restaurant"></label>
+          <label>Category<input id="category" required placeholder="Restaurant"></label>
+          <label>Location<input id="location" placeholder="Nagpur, Maharashtra"></label>
+          <label>Target customers<input id="audience" placeholder="18–35, local customers"></label>
+          <label>Products / services<textarea id="services" placeholder="Pizza, burgers, cafe..."></textarea></label>
+          <label>Monthly marketing budget<input id="budget" type="number" min="0" placeholder="10000"></label>
+          <label>Website<input id="website" type="url" placeholder="https://example.com"></label>
+          <label>Instagram / Facebook<input id="social" placeholder="@yourbusiness"></label>
+        </div>
+        <button class="primary" type="submit">Save Business Profile</button>
+        <span id="saveMsg" class="success"></span>
+      </form>
+    </section>
+
+    <section id="content" class="page">
+      <div class="section-title"><div><h2>AI Content Studio</h2><p>Generate social posts, reels and a content calendar.</p></div><button class="primary" id="genContent">✦ Generate Content</button></div>
+      <div id="contentOutput" class="content-grid"><div class="card empty">Save your business profile, then generate content.</div></div>
+    </section>
+
+    <section id="seo" class="page">
+      <div class="section-title"><div><h2>SEO Assistant</h2><p>Get keyword, on-page and content opportunities.</p></div><button class="primary" id="genSEO">⌕ Run AI SEO Audit</button></div>
+      <div id="seoOutput" class="grid two"><div class="card empty">Your AI SEO audit will appear here.</div></div>
+    </section>
+
+    <section id="ads" class="page">
+      <div class="section-title"><div><h2>Campaign Planner</h2><p>Build ad concepts before spending real money.</p></div><button class="primary" id="genAds">◈ Generate Campaigns</button></div>
+      <div id="adsOutput" class="grid two"><div class="card empty">No campaigns generated yet.</div></div>
+    </section>
+
+    <section id="analytics" class="page">
+      <div class="section-title"><div><h2>Analytics</h2><p>Prototype metrics. Connect platform APIs later for live data.</p></div></div>
+      <div class="stats">
+        <div class="stat"><span>Website visits</span><b>3,240</b><small>sample data</small></div>
+        <div class="stat"><span>Social reach</span><b>28.4K</b><small>sample data</small></div>
+        <div class="stat"><span>Leads</span><b>146</b><small>sample data</small></div>
+        <div class="stat"><span>Conversions</span><b>38</b><small>sample data</small></div>
+      </div>
+      <div class="card"><h3>AI insight</h3><p>Connect Meta, Google, website analytics and CRM data to replace these demo metrics with live performance data.</p></div>
+    </section>
+
+    <section id="settings" class="page">
+      <div class="section-title"><div><h2>Settings</h2><p>Choose how your MVP generates results.</p></div></div>
+      <div class="card">
+        <h3>AI connection</h3>
+        <p class="muted">The browser version uses a local demo engine. For real AI, use the included server endpoint and keep your API key on the server—not in frontend code.</p>
+        <div class="notice">Security rule: never paste an AI API key into <code>index.html</code> or <code>js/app.js</code>.</div>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
